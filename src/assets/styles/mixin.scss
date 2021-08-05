@@ -1,0 +1,66 @@
+/**
+ * 圆角伪元素处理方案
+ */
+
+@mixin border($dir, $color, $width: 1px, $radius: false) {
+  @if ($dir==all) {
+    &::after {
+      content: '';
+      width: 200%;
+      height: 200%;
+      border: $width solid $color;
+      transform: scale(0.5);
+      transform-origin: left top;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @if ($radius) {
+        border-radius: 2 * $radius; // 因为缩小了一倍，所以如果有圆角，则需要设置为原圆角的两倍
+      }
+    }
+  } @else if ($dir==top) {
+    &::after {
+      content: '';
+      width: 100%;
+      height: $width;
+      background-color: $color;
+      transform: scaleY(0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  } @else if ($dir==right) {
+    &::after {
+      content: '';
+      width: $width;
+      height: 100%;
+      background-color: $color;
+      transform: scaleX(0.5);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  } @else if ($dir==bottom) {
+    &::after {
+      content: '';
+      width: 100%;
+      height: $width;
+      background-color: $color;
+      transform: scaleY(0.5);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  } @else if ($dir==left) {
+    &::after {
+      content: '';
+      width: $width;
+      height: 100%;
+      background-color: $color;
+      transform: scaleX(0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

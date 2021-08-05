@@ -1,0 +1,165 @@
+//设置所有元素盒模型宽度即为设置宽度，padding和border影响实际宽度
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+i {
+  font-style: normal;
+}
+
+//清除ios中input的默认样式
+input,
+select,
+button,
+textarea {
+  line-height: inherit;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+//设置输入框placeholder样式
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #a2a2a2;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #a2a2a2;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #a2a2a2;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #a2a2a2;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #a2a2a2;
+}
+
+//生成默认的padding 和margin 以及padding/margin(top,bottom,left,right)的5-50px中5的倍数的class
+$box-list: (pd, padding), (pdt, padding-top), (pdb, padding-bottom), (pdl, padding-left), (pdr, padding-right),
+  (mg, margin), (mgt, margin-top), (mgb, margin-bottom), (mgl, margin-left), (mgr, margin-right);
+@each $box, $name in $box-list {
+  @for $i from 5 through 100 {
+    @if ($i % 5==0 and $i<=50) {
+      .#{$box}-#{$i} {
+        #{$name}: $i + px;
+      }
+    }
+    @if ($i%10==0 and $i>50) {
+      .#{$box}-#{$i} {
+        #{$name}: $i + px;
+      }
+    }
+  }
+}
+
+//生成默认的字体大小，font-size:10-50px;以及font-size:50-100中10的倍数class
+@for $i from 10 through 100 {
+  @if ($i<50) {
+    .fs-#{$i} {
+      font-size: $i + px;
+    }
+  } @else {
+    @if ($i%10==0) {
+      .fs-#{$i} {
+        font-size: $i + px;
+      }
+    }
+  }
+}
+
+/*清除浮动*/
+
+%clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+    font: 0/0 a;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.cl {
+  @extend %clearfix;
+}
+
+.ve-t {
+  vertical-align: top;
+}
+
+.ve-m {
+  vertical-align: middle;
+}
+
+.ve-b {
+  vertical-align: bottom;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.fw-b {
+  font-weight: bolder;
+}
+
+.fw-n {
+  font-weight: normal;
+}
+
+.tc {
+  text-align: center;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tj {
+  text-align: justify;
+}
+
+.z-hide {
+  display: none;
+}
+
+.z-show {
+  display: block;
+}

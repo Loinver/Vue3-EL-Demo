@@ -1,0 +1,12 @@
+@import './base.scss';
+@import './mixin.scss';
+@import './variable.scss';
+//设置body的默认字体和字体大小
+body {
+  color: #323232;
+  font-size: 14px;
+  font-style: normal;
+  font-family: 'PingFang SC', Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
