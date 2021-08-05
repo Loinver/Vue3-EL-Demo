@@ -21,7 +21,7 @@ export default defineComponent({
     return {
       locale: zhCn,
       name: '123',
-      text: 'texttexttext',
+      text: 'texttexttexttexttexttexttexttexttexttexttexttext',
     };
   },
 });
