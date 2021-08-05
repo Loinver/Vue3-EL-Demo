@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "cross-env NODE_ENV=development API_ENV=development vue-cli-service serve --mode default",
+    "build:T": "cross-env NODE_ENV=prodution API_ENV=test vue-cli-service build --mode default",
+    "build:P": "cross-env NODE_ENV=prodution API_ENV=prodution vue-cli-service build --mode default",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -28,6 +29,7 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.3",
     "compression-webpack-plugin": "^6.1.0",
+    "cross-env": "^7.0.3",
     "eslint": "^7.31.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.14.0",

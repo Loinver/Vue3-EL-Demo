@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-02-23 10:27:42
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-05 11:17:44
+ * @LastEditTime: 2021-08-05 14:51:33
 -->
 <template>
   <div class="demo">
@@ -127,7 +127,9 @@ export default defineComponent({
     'searchForm.user': 'handleSearch',
   },
   computed: {},
-  mounted() {},
+  mounted() {
+    console.log(this.$api);
+  },
   methods: {
     handleSearch() {
       console.log('触发了查询');

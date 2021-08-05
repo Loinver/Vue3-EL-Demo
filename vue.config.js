@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-01-13 10:18:30
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-05 10:12:43
+ * @LastEditTime: 2021-08-05 14:49:17
  */
 const path = require('path');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
@@ -67,7 +67,7 @@ module.exports = {
   },
   // 反向代理
   devServer: {
-    port: 2082,
+    port: 8080,
     host: '0.0.0.0',
     open: false,
     https: false,
