@@ -3,8 +3,8 @@
  * @Version:
  * @Author: Linyer
  * @Date: 2021-07-21 17:47:35
- * @LastEditors: Linyer
- * @LastEditTime: 2021-07-26 13:46:34
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-08-05 16:04:37
 -->
 <template>
   <ul class="flex">
@@ -12,6 +12,7 @@
     <button @click="handlePostRequest">发起post请求</button>
     <router-link :to="{ name: 'test' }">跳转test</router-link>
     <router-link :to="{ name: 'five' }">跳转five</router-link>
+    <router-link :to="{ name: 'five' }">跳转</router-link>
   </ul>
 </template>
 
