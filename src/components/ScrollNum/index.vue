@@ -62,7 +62,7 @@ export default {
         );
       }, this.delay * 1000));
   },
-  beforeDestroy() {
+  beforeUnmount() {
     clearTimeout(this.timer);
   },
 };

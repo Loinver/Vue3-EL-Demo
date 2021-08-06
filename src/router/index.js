@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-03-31 10:27:05
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-05 10:11:09
+ * @LastEditTime: 2021-08-06 09:33:53
  */
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -14,9 +14,9 @@ const routes = [
     redirect: '/index.html',
   },
   {
-    path: '/index.html',
-    name: 'Index',
-    component: () => import(/* webpackChunkName: "index" */ '@/views/Index/index.vue'),
+    path: '/table.html',
+    name: 'tableDemo',
+    component: () => import(/* webpackChunkName: "table" */ '@/views/table/index.vue'),
     meta: {
       auth: false,
       title: '首页',
