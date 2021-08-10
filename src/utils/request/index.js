@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-07-21 17:27:29
  * @LastEditors: Linyer
- * @LastEditTime: 2021-07-28 10:29:51
+ * @LastEditTime: 2021-08-10 08:59:20
  */
 import axios from 'axios';
 import setConfig from './axios.setConfig.js';
@@ -12,13 +12,13 @@ import handleResponse from './axios.handleResponse.js';
 import handleError from './axios.handleError.js';
 // import store from '@/store/index'
 // import router from '@/router/index.js'
-// import { Message } from 'element-ui';
+import { ElMessage } from 'element-plus';
 const showTip = (tip) => {
-  // Message({
-  //   type: 'warning',
-  //   message: tip || '请求出错啦',
-  //   duration: 1500,
-  // });
+  ElMessage({
+    type: 'warning',
+    message: tip || '请求出错啦',
+    duration: 1500,
+  });
   console.log({
     type: 'warning',
     message: tip || '请求出错啦',

@@ -4,14 +4,10 @@
  * @Author: Linyer
  * @Date: 2021-07-22 09:19:29
  * @LastEditors: Linyer
- * @LastEditTime: 2021-07-26 09:19:27
+ * @LastEditTime: 2021-08-10 09:23:10
  */
 export default {
   env: 'p',
   baseUrl: '',
   uploadUrl: '',
-  uploadCdnUrl: '',
-  ossUrl: '',
-  SECRET: '',
-  SYS_CODE: '',
 };

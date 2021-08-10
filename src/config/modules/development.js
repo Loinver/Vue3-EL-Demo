@@ -4,14 +4,10 @@
  * @Author: Linyer
  * @Date: 2021-07-22 09:19:29
  * @LastEditors: Linyer
- * @LastEditTime: 2021-07-26 09:19:55
+ * @LastEditTime: 2021-08-10 10:06:42
  */
 export default {
   env: 'd',
-  baseUrl: '',
+  baseUrl: 'http://127.0.0.1:4000/public',
   uploadUrl: '',
-  uploadCdnUrl: '',
-  ossUrl: '',
-  SECRET: '',
-  SYS_CODE: '',
 };

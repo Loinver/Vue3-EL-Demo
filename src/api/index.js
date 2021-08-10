@@ -1,4 +1,12 @@
 /*
+ * @Description:
+ * @Version:
+ * @Author: Linyer
+ * @Date: 2021-07-26 09:26:36
+ * @LastEditors: Linyer
+ * @LastEditTime: 2021-08-10 10:43:18
+ */
+/*
  * @Description: 统一管理所有api地址、对应的请求方式及自定义别名
  * 导出一个对象requestMap，属性名为apiMap中定义的别名，也就是调用时的名称，值为实际请求方法
  * 方法接收两个对象参数，第一个为需要传递的数据，第二个为请求头的配置信息。
@@ -24,8 +32,10 @@
 import { request } from '@/utils/request/index';
 
 const apiMap = {
-  getIndex: { method: 'get', url: '/v1/api/music/recommend' },
-  login: { method: 'post', url: '/v1/login' },
+  // 歌单类型列表
+  // getMusicType: { method: 'get', url: '/v1/playlist/catlist' },
+  // 登录
+  login: { method: 'post', url: '/login/cellphone' },
 };
 
 function injectRequest(apiObj) {

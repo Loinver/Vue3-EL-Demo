@@ -1,3 +1,11 @@
+/*
+ * @Description:
+ * @Version:
+ * @Author: Linyer
+ * @Date: 2021-07-21 17:40:52
+ * @LastEditors: Linyer
+ * @LastEditTime: 2021-08-10 10:44:41
+ */
 import baseConfig from '@/config';
 /**
  * @param {axios} axios实例
@@ -7,6 +15,7 @@ export default (axios, config = {}) => {
   const defaultConfig = {
     baseURL: baseConfig.baseUrl,
     timeout: 10000,
+    // withCredentials: true,
     headers: {
       'Content-Type': 'application/json;charset=UTF-8',
       'custom-defined-header-key': 'custom-defined-header-value',
