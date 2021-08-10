@@ -4,11 +4,12 @@
  * @Author: Linyer
  * @Date: 2021-03-31 10:22:38
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-05 14:53:17
+ * @LastEditTime: 2021-08-10 13:58:13
  */
 import { createApp } from 'vue';
 // 完整引入element-plus
 import ElementPlus from 'element-plus';
+import 'normalize.css';
 import 'element-plus/lib/theme-chalk/index.css';
 import 'assets/styles/index.scss';
 import App from './App.vue';

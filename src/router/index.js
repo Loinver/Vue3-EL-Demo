@@ -4,21 +4,20 @@
  * @Author: Linyer
  * @Date: 2021-03-31 10:27:05
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-09 10:21:13
+ * @LastEditTime: 2021-08-10 13:42:30
  */
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
   {
     path: '/',
-    redirect: '/table',
+    redirect: '/index',
   },
   {
-    path: '/table',
-    name: 'tableDemo',
-    component: () => import(/* webpackChunkName: "table" */ '@/views/table/index.vue'),
+    path: '/index',
+    name: 'Index',
+    component: () => import(/* webpackChunkName: "Index" */ '@/views/Home/index.vue'),
     meta: {
-      auth: false,
       title: '首页',
       keepAlive: true,
     },
