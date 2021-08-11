@@ -4,10 +4,19 @@
  * @Author: Linyer
  * @Date: 2021-08-10 13:41:41
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-11 14:20:59
+ * @LastEditTime: 2021-08-11 15:37:58
 -->
 <template>
-  <div class="components">我是组件列表区域</div>
+  <div class="components">
+    <div class="types" v-for="type in allComponents" :key="type.title">
+      <h1 class="component-title">{{ type.title }}</h1>
+      <ul v-for="item in type.components" :key="item.id">
+        {{
+          item.name
+        }}
+      </ul>
+    </div>
+  </div>
 </template>
 <script>
 import { defineComponent } from 'vue';
