@@ -19,6 +19,7 @@ export default defineComponent({
   data() {
     return {
       locale: zhCn,
+      Text: '测试一哈',
     };
   },
 });

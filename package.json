@@ -6,7 +6,13 @@
     "serve": "cross-env NODE_ENV=development API_ENV=development vue-cli-service serve --mode default",
     "build:T": "cross-env NODE_ENV=prodution API_ENV=test vue-cli-service build --mode default",
     "build:P": "cross-env NODE_ENV=prodution API_ENV=prodution vue-cli-service build --mode default",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "commit": "git add . && git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -36,7 +42,10 @@
     "lint-staged": "^11.1.1",
     "prettier": "^2.3.2",
     "sass": "^1.36.0",
-    "sass-loader": "^8.0.1"
+    "sass-loader": "^8.0.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^6.3.0"
   },
   "eslintConfig": {
     "root": true,
