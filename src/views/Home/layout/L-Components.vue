@@ -4,12 +4,12 @@
  * @Author: Linyer
  * @Date: 2021-08-10 13:41:41
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-11 15:33:00
+ * @LastEditTime: 2021-08-11 15:37:58
 -->
 <template>
   <div class="components">
     <div class="types" v-for="type in allComponents" :key="type.title">
-      <h1>{{ type.title }}</h1>
+      <h1 class="component-title">{{ type.title }}</h1>
       <ul v-for="item in type.components" :key="item.id">
         {{
           item.name
