@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-08-11 14:40:49
+ * @LastEditTime: 2021-08-11 15:09:30
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /vue-el-template/.cz-config.js
+ */
 module.exports = {
   types: [
     {
@@ -11,10 +19,6 @@ module.exports = {
     {
       value: 'fix',
       name: '✨  fix:      bug修复',
-    },
-    {
-      value: 'refactor',
-      name: '✨  refactor: 代码重构(不包括 bug 修复、功能新增)',
     },
     {
       value: 'docs',
@@ -31,6 +35,10 @@ module.exports = {
     {
       value: 'style',
       name: '✨  style:    代码格式(不影响功能，例如空格、分号等格式修正)',
+    },
+    {
+      value: 'other',
+      name: '✨  other:    其他',
     },
   ],
 
