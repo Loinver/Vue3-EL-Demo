@@ -4,10 +4,10 @@
  * @Author: Linyer
  * @Date: 2021-08-10 13:41:41
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-11 14:20:59
+ * @LastEditTime: 2021-08-11 15:11:58
 -->
 <template>
-  <div class="components">我是组件列表区域</div>
+  <div class="components">我是组件列表区域1111</div>
 </template>
 <script>
 import { defineComponent } from 'vue';
