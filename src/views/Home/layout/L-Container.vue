@@ -10,7 +10,7 @@
   <div class="container"></div>
 </template>
 <script>
-import { defineComponent, ref, mounted, methods } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   setup() {},

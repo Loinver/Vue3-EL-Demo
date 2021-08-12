@@ -6,7 +6,7 @@
     "serve": "cross-env NODE_ENV=development API_ENV=development vue-cli-service serve --mode default",
     "build:T": "cross-env NODE_ENV=prodution API_ENV=test vue-cli-service build --mode default",
     "build:P": "cross-env NODE_ENV=prodution API_ENV=prodution vue-cli-service build --mode default",
-    "lint": "vue-cli-service lint",
+    "lint": "vue-cli-service lint --fix --ext .js,.vue",
     "commit": "git add . && git-cz"
   },
   "config": {

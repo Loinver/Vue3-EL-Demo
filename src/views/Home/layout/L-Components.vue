@@ -31,7 +31,7 @@
 </template>
 <script>
 import draggable from 'vuedraggable';
-import { defineComponent, h } from 'vue';
+import { defineComponent } from 'vue';
 import { inputComponents, selectComponents, layoutComponents } from '../components/config';
 export default defineComponent({
   components: {
@@ -53,7 +53,7 @@ export default defineComponent({
         components: layoutComponents,
       },
     ];
-    console.log(h(allComponents[0].components));
+    // console.log(h(allComponents[0].components));
     return {
       allComponents,
     };
