@@ -8,25 +8,36 @@
 -->
 <template>
   <div class="header">
-    <el-button type="text">
+    <el-button type="text" @click="handleHeaderButton('run-code')">
       <i class="el-icon-video-play"> </i>
       运行
     </el-button>
-    <el-button type="text">
+    <el-button type="text" @click="handleHeaderButton('check-code')">
       <i class="el-icon-view"> </i>
-      查看JSON
+      查看代码
     </el-button>
-    <el-button type="text">
+    <el-button type="text" @click="handleHeaderButton('export-file')">
       <i class="el-icon-download"> </i>
       导出VUE文件
     </el-button>
-    <el-button type="text"> <i class="el-icon-document-copy"> </i>复制代码 </el-button>
-    <el-button type="text"> <i class="el-icon-delete"> </i>清空 </el-button>
+    <el-button type="text" @click="handleHeaderButton('copy-code')">
+      <i class="el-icon-document-copy"> </i>复制代码
+    </el-button>
+    <el-button type="text" @click="handleHeaderButton('clear')"> <i class="el-icon-delete"> </i>清空 </el-button>
   </div>
 </template>
 <script>
 import { defineComponent } from 'vue';
-export default defineComponent({});
+export default defineComponent({
+  setup(props, { emit }) {
+    const handleHeaderButton = (value) => {
+      emit('handleHeaderButton', value);
+    };
+    return {
+      handleHeaderButton,
+    };
+  },
+});
 </script>
 <style lang="scss" scoped>
 @import '@/assets/styles/variables.scss';

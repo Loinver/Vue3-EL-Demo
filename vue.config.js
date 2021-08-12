@@ -10,7 +10,7 @@ const path = require('path');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const isProduction = process.env.NODE_ENV === 'production';
-
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
@@ -23,6 +23,8 @@ module.exports = {
   // 编译警告
   lintOnSave: true,
   configureWebpack: (config) => {
+    //添加vscode 网页编辑器
+    config.plugins.push(new MonacoWebpackPlugin());
     if (isProduction) {
       // 开启gzip压缩
       const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i;

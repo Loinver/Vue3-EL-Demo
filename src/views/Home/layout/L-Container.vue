@@ -7,11 +7,14 @@
  * @LastEditTime: 2021-08-10 14:28:45
 -->
 <template>
-  <div class="container">我是中间编辑区域</div>
+  <div class="container"></div>
 </template>
 <script>
-import { defineComponent } from 'vue';
-export default defineComponent({});
+import { defineComponent, ref, mounted, methods } from 'vue';
+
+export default defineComponent({
+  setup() {},
+});
 </script>
 <style lang="scss" scoped>
 .container {
