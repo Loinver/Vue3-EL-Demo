@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-08-10 13:41:41
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-10 14:29:17
+ * @LastEditTime: 2021-08-12 09:48:25
 -->
 <template>
   <div class="container-wrap">
@@ -53,7 +53,7 @@ export default {
       display: flex;
       justify-content: space-between;
       .components {
-        width: 200px;
+        width: 250px;
         flex-shrink: 0;
       }
     }
