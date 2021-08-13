@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-01-13 10:18:30
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-10 10:06:34
+ * @LastEditTime: 2021-08-13 11:41:55
  */
 const path = require('path');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
