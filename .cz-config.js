@@ -57,20 +57,17 @@ module.exports = {
     return {
       value,
       name: `${value.padEnd(30)} (${description})`,
-    }
+    };
   }),
   messages: {
     type: '确保本次提交遵循规范！\n选择你要提交的类型：',
     customScope: '请输入自定义的 scope:',
     subject: '填写本次提交描述* ( 一句话概括 ):\n',
     body: '填写更加详细的变更描述 ( 不填可以直接回车,话多使用 "|" 换行 ):\n',
-    breaking:
-      '列举非兼容性重大的变更 ( 不填可以直接回车,话多使用 "|" 换行 ):\n',
-    footer:
-      '列举出所有变更的 ISSUES CLOSED 例如: #31, #34 ( 不填可以直接回车,话多使用 "|" 换行 ):\n',
-    confirmCommit:
-      '确认提交？( 这步完了 需要在控制台输入 "git push origin <你需要提交远程分支名>" )',
+    breaking: '列举非兼容性重大的变更 ( 不填可以直接回车,话多使用 "|" 换行 ):\n',
+    footer: '列举出所有变更的 ISSUES CLOSED 例如: #31, #34 ( 不填可以直接回车,话多使用 "|" 换行 ):\n',
+    confirmCommit: '确认提交？( 这步完了 需要在控制台输入 "git push origin <你需要提交远程分支名>" )',
   },
   allowCustomScopes: true,
   allowBreakingChanges: ['feat', 'fix'],
-}
+};

@@ -57,6 +57,7 @@ export default defineComponent({
     ];
     let tempActiveData;
 
+    // console.log(h(allComponents[0].components));
     return {
       allComponents,
       tempActiveData,
