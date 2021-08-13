@@ -4,9 +4,9 @@
  * @Author: Linyer
  * @Date: 2021-03-31 10:27:05
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-10 13:42:30
+ * @LastEditTime: 2021-08-13 14:17:39
  */
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 const routes = [
   {
@@ -37,7 +37,7 @@ const modules = modulesFiles.keys().reduce((modules, modulePath) => {
   return modules;
 }, []);
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes: routes.concat(modules),
 });
 
