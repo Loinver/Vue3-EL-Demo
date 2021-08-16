@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-08-10 13:41:41
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-12 17:33:55
+ * @LastEditTime: 2021-08-13 10:44:13
 -->
 <template>
   <div class="components">
@@ -57,7 +57,6 @@ export default defineComponent({
     ];
     let tempActiveData;
 
-    // console.log(h(allComponents[0].components));
     return {
       allComponents,
       tempActiveData,
@@ -84,6 +83,7 @@ export default defineComponent({
         this.activeData = this.tempActiveData;
         this.activeId = this.idGlobal;
       }
+      console.log('[ this.tempActiveData ]', this.tempActiveData);
     },
     // 添加组件
     addComponent(item) {

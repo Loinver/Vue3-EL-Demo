@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-08-10 13:41:41
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-12 17:43:24
+ * @LastEditTime: 2021-08-13 10:45:04
 -->
 <template>
   <el-scrollbar class="container">
@@ -22,7 +22,7 @@
             />
           </template>
         </draggable>
-        <div v-show="!drawingList.length" class="empty-info">从左侧拖入组件进行页面设计</div>
+        <div v-show="!drawingList.length" class="empty-tips">从左侧拖入组件进行页面设计</div>
       </div>
     </el-row>
   </el-scrollbar>
@@ -50,13 +50,14 @@ export default defineComponent({
   .center-board {
     padding: 12px;
     .board-wrap {
+      width: 100%;
       height: calc(100vh - 64px);
     }
     .drawing-board {
       height: 100%;
       position: relative;
     }
-    .empty-info {
+    .empty-tips {
       position: absolute;
       top: 40vh;
       left: 0;
