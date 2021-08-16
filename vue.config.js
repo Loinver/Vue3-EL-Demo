@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-01-13 10:18:30
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-13 14:15:56
+ * @LastEditTime: 2021-08-16 14:41:06
  */
 const path = require('path');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
@@ -16,7 +16,7 @@ function resolve(dir) {
 
 module.exports = {
   publicPath: process.env.baseUrl || './',
-  outputDir: process.env.VUE_APP_OUTPUT_DIR,
+  outputDir: process.env.VUE_APP_OUTPUT_DIR || undefined,
   assetsDir: 'static',
   indexPath: 'index.html',
   // 编译警告
