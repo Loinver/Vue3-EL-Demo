@@ -56,7 +56,6 @@ export default {
         case 'check-code':
           data.drawer = !data.drawer;
           break;
-
         default:
           ElMessage.success({
             message: `点击了 ${ev[value]} 按钮`,

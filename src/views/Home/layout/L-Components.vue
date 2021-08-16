@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-08-10 13:41:41
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-13 10:44:13
+ * @LastEditTime: 2021-08-16 15:55:23
 -->
 <template>
   <div class="components">
@@ -17,6 +17,7 @@
         item-key="name"
         draggable=".components-item"
         :sort="false"
+        :clone="cloneComponent"
         @end="onEnd"
       >
         <template #item="{ element }">
@@ -34,7 +35,8 @@
 import draggable from 'vuedraggable';
 import { defineComponent } from 'vue';
 import { deepClone } from '@/utils/index';
-import { inputComponents, selectComponents, layoutComponents } from '../components/config';
+import { useStore } from 'vuex';
+import { inputComponents, selectComponents, layoutComponents, containerConf } from '../components/config';
 export default defineComponent({
   components: {
     draggable,
@@ -56,15 +58,16 @@ export default defineComponent({
       },
     ];
     let tempActiveData;
-
+    const store = useStore();
     return {
       allComponents,
       tempActiveData,
+      containerConf,
+      store,
     };
   },
   methods: {
     fetchData(component) {
-      console.log(component);
       const { dataType, method, url } = component.__config__;
       if (dataType === 'dynamic' && method && url) {
         this.setLoading(component, true);
@@ -89,14 +92,16 @@ export default defineComponent({
     addComponent(item) {
       const clone = this.cloneComponent(item);
       this.fetchData(clone);
-      this.drawingList.push(clone);
       this.activeFormItem(clone);
+      // this.drawingList.push(clone);
+      console.log(1111);
+      this.store.dispatch('main/setDrawList', clone);
     },
     // 克隆组件
     cloneComponent(origin) {
       const clone = deepClone(origin);
       const config = clone.__config__;
-      config.span = this.formConf.span; // 生成代码时，会根据span做精简判断
+      config.span = this.containerConf.span; // 生成代码时，会根据span做精简判断
       this.createIdAndKey(clone);
       clone.placeholder !== undefined && (clone.placeholder += config.label);
       this.tempActiveData = clone;
@@ -118,6 +123,11 @@ export default defineComponent({
         config.children = config.children.map((childItem) => this.createIdAndKey(childItem));
       }
       return item;
+    },
+    // Todo：设置当前选中组件数据
+    activeFormItem(currentItem) {
+      this.activeData = currentItem;
+      this.activeId = currentItem.__config__.formId;
     },
   },
 });
@@ -141,14 +151,14 @@ export default defineComponent({
     padding: 5px;
     &-body {
       padding: 8px 10px;
-      background: #f6f7ff;
+      background: $base-background-color;
       font-size: 12px;
       cursor: move;
-      border: 1px dashed #f6f7ff;
+      border: 1px dashed $base-background-color;
       border-radius: 3px;
       &:hover {
-        border: 1px dashed #787be8;
-        color: #787be8;
+        border: 1px dashed $base-border-color-active;
+        color: $base-border-color-active;
       }
     }
   }

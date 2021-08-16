@@ -4,29 +4,26 @@
  * @Author: Linyer
  * @Date: 2021-01-13 14:04:40
  * @LastEditors: Linyer
- * @LastEditTime: 2021-07-29 10:43:04
+ * @LastEditTime: 2021-08-16 15:48:53
  */
-import { getToken } from 'utils/auth';
 const state = {
-  token: getToken(),
-  userInfo: {},
+  drawingList: [], // 绘制的组件列表
 };
 
 const mutations = {
-  SET_USER_INFO(state, data) {
-    state.userInfo = data;
+  SET_DRAW_LIST(state, data) {
+    state.drawingList.push(data);
+    console.log(state.drawingList);
   },
 };
 
 const actions = {
-  setUserInfo({ commit }, val) {
-    commit('SET_USER_INFO', val);
+  setDrawList({ commit }, data) {
+    commit('SET_DRAW_LIST', data);
   },
 };
 
-const getters = {
-  token: (state) => state.token,
-};
+const getters = {};
 
 export default {
   namespaced: true,
