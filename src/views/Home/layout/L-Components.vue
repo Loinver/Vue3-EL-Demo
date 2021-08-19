@@ -33,7 +33,7 @@
 </template>
 <script>
 import draggable from 'vuedraggable';
-import { defineComponent } from 'vue';
+import { defineComponent, reactive } from 'vue';
 import { deepClone } from '@/utils/index';
 import { useStore } from 'vuex';
 import { inputComponents, selectComponents, layoutComponents, containerConf } from '../components/config';
@@ -42,6 +42,7 @@ export default defineComponent({
     draggable,
   },
   setup() {
+    const store = useStore();
     // 定义组件列表
     const allComponents = [
       {
@@ -57,8 +58,7 @@ export default defineComponent({
         components: layoutComponents,
       },
     ];
-    let tempActiveData;
-    const store = useStore();
+    const tempActiveData = reactive({});
     return {
       allComponents,
       tempActiveData,

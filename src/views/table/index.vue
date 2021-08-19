@@ -9,7 +9,7 @@
 <template>
   <div>1111</div>
   <div class="demo">
-    <l-header></l-header>
+    <l-header class="demo-header"></l-header>
     <l-middle></l-middle>
   </div>
 </template>
@@ -31,5 +31,8 @@ export default {
 .demo {
   width: 1200px;
   margin: 50px auto;
+  &-header {
+    color: red;
+  }
 }
 </style>
