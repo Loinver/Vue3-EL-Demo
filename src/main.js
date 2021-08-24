@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-03-31 10:22:38
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-13 14:08:58
+ * @LastEditTime: 2021-08-24 11:21:12
  */
 import { createApp } from 'vue';
 import 'normalize.css';
@@ -15,10 +15,10 @@ import 'assets/styles/index.scss';
 import App from './App.vue';
 import router from './router';
 import store from './store/index';
-// import api from '@/api/index.js'; // 暂时用不上接口请求
+import api from '@/api/index.js'; // 暂时用不上接口请求
 
 const app = createApp(App);
-// app.config.globalProperties.$api = api; // 暂时用不上
+app.config.globalProperties.$api = api; // 暂时用不上
 // 挂载组件
 app.use(ElementPlus, { size: 'small' });
 // 挂载路由及状态存储

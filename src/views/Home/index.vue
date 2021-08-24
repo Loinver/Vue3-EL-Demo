@@ -4,7 +4,7 @@
  * @Author: Linyer
  * @Date: 2021-08-10 13:41:41
  * @LastEditors: Linyer
- * @LastEditTime: 2021-08-12 09:48:25
+ * @LastEditTime: 2021-08-24 13:32:38
 -->
 <template>
   <div>
@@ -68,6 +68,9 @@ export default {
       handleHeaderButton,
       data,
     };
+  },
+  created() {
+    console.log(this.$api);
   },
 };
 </script>
